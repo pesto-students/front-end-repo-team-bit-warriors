@@ -25,6 +25,8 @@ import Home from './pages/Home';
 import MallPage from './pages/Mall';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import AuthPage from './pages/Auth';
+
 
 const App = () => {
   return (
@@ -33,11 +35,15 @@ const App = () => {
       <Routes>
         <Route path="/" component={Home} element={<Home/>} />
         <Route path="/mall/:mall_id" element={<MallPage/>} />
+        <Route path='/Login' element={<AuthPage></AuthPage>}></Route>
       </Routes>
       <Footer/>
     </Router> 
   );
 };
+
+
+
 
 
 export default App;
