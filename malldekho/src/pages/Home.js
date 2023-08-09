@@ -1,12 +1,16 @@
 import React from 'react';
 import SearchBox from '../components/SearchBox';
+import ThumbnailText from '../components/ThumbnailText'
 
 
 const Home = () => {
+    const thumnailHeader = "Discover your shopping paradise"
     return (
         <>
-            <h1>This is home page</h1>
-            <SearchBox/>
+            <ThumbnailText text={thumnailHeader}/>
+            <main>
+                <SearchBox/>
+            </main>
         </>
     )
 }

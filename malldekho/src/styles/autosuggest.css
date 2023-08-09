@@ -1,0 +1,63 @@
+/* Container for the Autosuggest component */
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white; /* Set your background color here */
+  }
+  
+  /* Style for the search box container */
+  .search-box {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5; /* Set a background color for the search box */
+    border-radius: 20px;
+    padding: 10px 20px;
+    width: 70%; /* Adjust the width as desired */
+    max-width: 400px; /* Set a max-width for responsiveness */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Style for the search icon */
+  .search-icon {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #999; /* Set the color for the search icon */
+  }
+  
+  /* Style for the input */
+  .react-autosuggest__input {
+    flex: 1;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+  }
+  
+  /* Style for the suggestions container */
+  .react-autosuggest__suggestions-container {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  
+  /* Style for individual suggestions */
+  .react-autosuggest__suggestion {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .react-autosuggest__suggestion:hover {
+    background-color: #f0f0f0;
+  }
+  

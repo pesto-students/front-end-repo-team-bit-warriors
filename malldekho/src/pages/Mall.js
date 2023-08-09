@@ -4,22 +4,29 @@ import { useParams } from 'react-router-dom';
 import MallService from "../services/MallService";
 import StoreService from "../services/StoreService";
 import MallImage from  "../assets/Mall.jpg"
+import MiniCard from "../components/MiniCard"
+import SearchBox from "../components/SearchBox";
+import VerticalGrid from "../components/VerticalGrid";
 import "../styles/Mall.css"
 
 const MallsPage = () => {
     const [mall, setMall] = useState([]); // State to store the fetched malls
-    const [store, setStore] = useState([]); // State to store the fetched stores
+    const [floors, setfloors] = useState([]); // State to store the fetched mall's floor
+    const [stores, setStores] = useState([]); // State to store the fetched stores
     const { mall_id } = useParams();
+
 
     useEffect(() => {
         // Fetch the data once the component mounts
         async function fetchData() {
             try {
                 const mallsData = await MallService.fetchAllMalls()
-                const myMall = mallsData.filter(mall => mall._id === mall_id)
+                const myMall = mallsData.find(mall => mall._id === mall_id)
                 const stores = await StoreService.fetchStoresByMalls(myMall._id)
-                setStore(stores)
-                setMall(myMall); // Update the state with fetched malls
+                console.log("Mall", myMall)
+                setStores(stores)
+                setMall(myMall)
+                setfloors(myMall.floors)
             } catch (error) {
                 console.error("Error fetching malls:", error);
             }
@@ -75,6 +82,18 @@ const MallsPage = () => {
                 <div className="mallImage">
                     <img src={MallImage} alt=""/>
                 </div>
+            </div>
+                <SearchBox/>
+            <div className="storeInMalls">
+                <div className="storeInMallsContainer">
+
+                    <VerticalGrid numbers={floors}/>
+                    {/* on floor click below component should get updated */}
+                    {stores.map((store) =>
+                        store ? <MiniCard key={store._id} store={store} /> : null
+                    )}
+                </div>
+                
             </div>
         </>
     );

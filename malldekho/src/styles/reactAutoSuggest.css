@@ -1,0 +1,99 @@
+main{
+    height: 70vh;
+}
+/* Container for the Autosuggest component */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    background-color: white;
+  }
+  
+  /* Style for the search box container */
+  .search-box {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: #f5f5f5; 
+    border-radius: 30px;
+    padding: 10px 20px;
+    max-width: 70%; /* Adjust the width as desired */
+    width: 600px; /* Set a max-width for responsiveness */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Style for the search icon */
+  .search-icon {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #999;
+  }
+  
+  /* Style for the input */
+  .react-autosuggest__input {
+    flex: 1;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+  }
+  
+  /* Style for the suggestions container */
+  .react-autosuggest__suggestions-container {
+    position: absolute;
+    top: calc(100% + 2px); /* Place suggestions below the input with a small gap */
+    left: 0;
+    right: 0;
+    /* background-color: white; */
+    /* border: 1px solid #ccc; */
+    /* border-radius: 8px; */
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    z-index: 1;
+    opacity: 0; /* Start with no opacity */
+    transform: translateY(-10px); /* Move suggestions up slightly */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth animations */
+  }
+  
+  .react-autosuggest__suggestions-container--open {
+    opacity: 1; /* Show suggestions with full opacity */
+    transform: translateY(0); /* Reset the transform for smooth appearance */
+  }
+/* Style for suggestion item */
+.react-autosuggest__suggestion {
+    width: 100%;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+  }
+  
+  .react-autosuggest__suggestion:hover {
+    background-color: #ffffee;
+  }
+  
+  /* Style for suggestion image */
+  .suggestion-image {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* Style for suggestion details */
+  .suggestion-details {
+    flex: 1;
+  }
+  
+  .suggestion-name {
+    font-weight: 500;
+  }
+  
+  .suggestion-info {
+    color: #999;
+    font-size: 12px;
+  }
+  

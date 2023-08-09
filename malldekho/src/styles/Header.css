@@ -1,14 +1,38 @@
 .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
+    padding: 1em 2em;
+    color: var(--dark-primary-color);
+    width: 100%;
+    margin: 0 auto;
+    font: normal normal 500 1em Roboto;
+    background-color: var(--dissolve-color);
+    /* background: linear-gradient(to bottom, 
+                                var(--primary-color),
+                                var(--primary-color),
+                                var(--primary-color),
+                                var(--dissolve-color)); */
+  
 }
-
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+.logo h1 {
+    background: linear-gradient(to bottom, var(--darker-primary-color), var(--primary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: bolder;
+    color: transparent;
+  }
 .logo img {
-    max-width: 100px;
+    max-width: 40px;
     height: auto;
 }
 
@@ -25,11 +49,14 @@
 }
 
 .nav li {
+    text-transform: uppercase;
+    font-weight: 700;
     margin-right: 20px;
+
 }
 
 .nav a {
-    color: white;
+    color: var(--dark-primary-color);
     text-decoration: none;
 }
 

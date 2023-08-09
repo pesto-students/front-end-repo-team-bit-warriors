@@ -1,0 +1,38 @@
+.e-bold{
+    font-family: 'Montserrat', sans-serif;
+    font-weight:900;
+  }
+  .thin{
+    font-family: 'Montserrat', sans-serif;
+    font-weight:300;
+  }
+
+.search-wrap{
+    padding:15vh 0 0;
+    margin-bottom:5vmin;
+    text-align: center;
+    /* text-transform: lowercase; */
+}
+.random{
+    cursor:pointer;
+    font-size:300%;
+    display:inline-block;
+    background:linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB,#82FF9E);
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: Gradient 5s ease infinite;
+    margin-bottom:5vmin;
+  }
+  @keyframes Gradient {
+      0% {
+          background-position: 0% 50%
+      }
+      50% {
+          background-position: 100% 50%
+      }
+      100% {
+          background-position: 0% 50%
+      }
+  }
