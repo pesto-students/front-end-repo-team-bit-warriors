@@ -1,0 +1,28 @@
+
+  /* STORE CSS */
+  .floorMapStore{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    justify-content: center;
+  }
+  .storeInMalls{
+      width: 70%;
+      max-width: 1200px;
+      margin: 3em auto;
+    }
+    .storeInMallsContainer{
+        width: 100%;
+        display: flex;
+        gap: 3em;
+    }
+  /* .storeInMallsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+  }
+ */
+

@@ -68,16 +68,3 @@
     gap: 1rem;
   }
 
-
-  /* STORE CSS */
-  .storeInMalls{
-    display: flex;
-  }
-  .storeInMallsContainer{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5em;
-  }
