@@ -27,7 +27,8 @@ code {
 :root {
   --primary-color: #C681FD;
   --darker-primary-color: #2a0b44;
-  --dark-primary-color: #6C13B3;
+  --grey-primary-color: #70617d;
+  --dark-primary-color: #8965a7;
   --secondary-color: #6C757D;
   --dissolve-color: #ffffff;
   --black-color: #000000;

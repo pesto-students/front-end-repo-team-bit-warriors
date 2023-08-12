@@ -1,3 +1,8 @@
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .react-autosuggest__container {
     position: relative;
     /* width: 70%;

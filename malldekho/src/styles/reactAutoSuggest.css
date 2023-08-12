@@ -2,11 +2,10 @@ main{
     height: 70vh;
 }
 /* Container for the Autosuggest component */
-.container {
+.searchboxContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* height: 100vh; */
     background-color: white;
   }
   
@@ -31,6 +30,9 @@ main{
   }
   
   /* Style for the input */
+  .react-autosuggest__container {
+    width: 100%;
+  }
   .react-autosuggest__input {
     flex: 1;
     padding: 8px;
@@ -38,6 +40,8 @@ main{
     border: none;
     background-color: transparent;
     outline: none;
+    width: 100%;
+    cursor: help;
   }
   
   /* Style for the suggestions container */

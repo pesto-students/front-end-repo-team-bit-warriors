@@ -73,7 +73,7 @@ const SearchBox = () => {
   };
 
   return (
-      <div className="container">
+      <div className="searchboxContainer">
         <div className="search-box">
           <FaSearch/>
           <Autosuggest
