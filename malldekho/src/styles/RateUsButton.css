@@ -1,0 +1,22 @@
+.rate-us {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .stars {
+    display: inline-block;
+  }
+  
+  .star {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .star.active {
+    color: gold;
+  }
+  
+  .rating-text {
+    margin-top: 10px;
+  }
+  

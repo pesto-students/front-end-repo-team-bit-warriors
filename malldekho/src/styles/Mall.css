@@ -13,9 +13,7 @@
     align-items: center;
     gap: 1rem;
   }
-  .icon {
-    font-size: 24px;
-  }
+
   
   a {
     color: #007bff;
@@ -67,3 +65,4 @@
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
+
