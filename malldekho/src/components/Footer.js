@@ -1,119 +1,71 @@
 import React from "react";
 import "../styles/Footer.css";
+import logo from "../assets/logo.png";
+
 
 const Footer = () => {
     return (
         <>
-            <footer id="site-footer">
-
-                <section class="horizontal-footer-section" id="footer-top-section">
-                    <div id="footer-logo">
-                        <img src="https://raw.githubusercontent.com/taviskaron/t-div-headers/main/img/logo3.png" alt="footer logo" role="presentation" />
+            <footer>
+                <div className="footerContainer">
+                    <div className="logo">
+                        <img src={logo} alt="" />
+                        <h1>Mall dekho</h1>
                     </div>
-                    <div id="footer-top-menu-container" role="menubar">
-                        <ul id="footer-top-menu" role="menu">
-                            <li class="footer-top-menu-item" role="menuitem">
-                                <a href="#" class="footer-top-menu-link">IT Services</a>
-                            </li>
-                            <li class="footer-top-menu-item footer-top-menu-item-active" role="menuitem">
-                                <a href="#" class="footer-top-menu-link">Web development</a>
-                            </li>
-                            <li class="footer-top-menu-item" role="menuitem">
-                                <a href="#" class="footer-top-menu-link">SEO</a>
-                            </li>
-                            <li class="footer-top-menu-item" role="menuitem">
-                                <a href="#" class="footer-top-menu-link">UI/UX</a>
-                            </li>
+                    <div className="companynlinks">
+                        <section>
+                            <h1>Company</h1>
+                            <ul>
+                                <a>About Us</a>
+                                <a>For Shoppers</a>
+                                <a>Contact Us</a>
+                            </ul>
+                        </section>
+                        <section>
+                            <h1>Popular Links</h1>
+                            <ul>
+                                <a>Browse Stores</a>
+                                <a>Browse Malls</a>
+                                <a>Browse Discounts</a>
+                                <a>Browse history posts</a>
+                                <a>Browse Favourites </a>
+                                <a>Browse location </a>
+                                <a>Get insights of mall</a>
+                            </ul>
+                        </section>
+                    </div>
+                    <div className="location">
+                        <section>
+                            <h1>Locations</h1>
+                            <ul>
+                                <h4>Mumbai</h4>
+                                <h4>Delhi</h4>
+                                <h4>Pune</h4>
+                                <h4>Banglore</h4>
+                                <h4>Hyderabad </h4>
+                                <h4>Kolkata </h4>
+                                <h4>Surat</h4>
+                                <h4>Nashik</h4>
+                                <h4>Ahemdabad</h4>
+                            </ul>
+                        </section>
+                    </div>
+                    <div className="shoppers">
+                        <h1>Shopping Elite</h1>
+                        <p>Find Your Retail Paradise Unlock an extraordinary shopping experience with Mall Dekho</p>
+                        <p>Seamless Mall Navigation Made Easy Navigate malls effortlessly with Mall Dekho</p>
+                    </div>
+                    <div className="followus">
+                        <h1>Follow Us</h1>
+                        <ul>
+                            <a></a>
                         </ul>
                     </div>
-                    <div id="footer-buttons-container">
-                        <a href="#" class="footer-button" role="button">View our Projects</a>
-                    </div>
-                </section>
-
-                <section class="horizontal-footer-section" id="footer-middle-section">
-                    <div id="footer-about" class="footer-columns footer-columns-large">
-                        <h1>Our Address</h1>
-                        <address>
-                            <p><img src="https://img.icons8.com/ios-filled/14/eeeeee/marker.png" />30/20, Verkhy street, Moscow, Russia</p>
-                            <p><img src="https://img.icons8.com/ios-filled/14/eeeeee/phone.png" />7 (800) 555–35–35</p>
-                            <p><img src="https://img.icons8.com/ios-filled/14/eeeeee/mail.png" />noreply@reply.io</p>
-                            <p><img src="https://img.icons8.com/ios-filled/14/eeeeee/clock.png" />8:00 AM – 8:00 PM</p>
-                        </address>
-                        <h1> Our Newsletter</h1>
-                        <a href="#" class="footer-button" role="button">Subscribe</a>
-                    </div>
-                    <div class="footer-columns">
-                        <h1>Overview</h1>
-                        <ul class="footer-column-menu" role="menu">
-                            <li class="footer-column-menu-item" role="menuitem">
-                                <a href="#" class="footer-column-menu-item-link">Services </a>
-                            </li>
-                            <li class="footer-column-menu-item" role="menuitem">
-                                <a href="#" class="footer-column-menu-item-link">Pricing</a>
-                            </li>
-                            <li class="footer-column-menu-item" role="menuitem">
-                                <a href="#" class="footer-column-menu-item-link">Portfolio</a>
-                            </li>
-                            <li class="footer-column-menu-item" role="menuitem">
-                                <a href="#" class="footer-column-menu-item-link">News</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-columns">
-                        <h1>Resources</h1>
-                        <ul class="footer-column-menu" role="menu">
-                            <li class="footer-column-menu-item" role="menuitem">
-                                <a href="#" class="footer-column-menu-item-link">FAQ</a>
-                            </li>
-                            <li class="footer-column-menu-item" role="menuitem">
-                                <a href="#" class="footer-column-menu-item-link">Media</a>
-                            </li>
-                            <li class="footer-column-menu-item" role="menuitem">
-                                <a href="#" class="footer-column-menu-item-link">Guides</a>
-                            </li>
-                            <li class="footer-column-menu-item" role="menuitem">
-                                <a href="#" class="footer-column-menu-item-link">Free Resources</a>
-                            </li>
-                            <li class="footer-column-menu-item" role="menuitem">
-                                <a href="#" class="footer-column-menu-item-link">Testimonials</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-columns">
-                        <h1>Information</h1>
-                        <ul class="footer-column-menu" role="menu">
-                            <li class="footer-column-menu-item" role="menuitem">
-                                <a href="#" class="footer-column-menu-item-link">About Us</a>
-                            </li>
-                            <li class="footer-column-menu-item" role="menuitem">
-                                <a href="#" class="footer-column-menu-item-link">Terms of Use</a>
-                            </li>
-                            <li class="footer-column-menu-item">
-                                <a href="#" class="footer-column-menu-item-link" role="menuitem">Legal Information</a>
-                            </li>
-                            <li class="footer-column-menu-item" role="menuitem">
-                                <a href="#" class="footer-column-menu-item-link">Message Us</a>
-                            </li>
-                            <li class="footer-column-menu-item" role="menuitem">
-                                <a href="#" class="footer-column-menu-item-link">Leave a Feedback</a>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-
-                <section class="horizontal-footer-section" id="footer-bottom-section">
-                    <div id="footer-copyright-info">
-                        &copy; Reimu Inc. 2022. All rights reserved.
-                    </div>
-                    <div id="footer-social-buttons">
-                        <img src="https://img.icons8.com/ios-filled/25/999999/facebook--v1.png" />
-                        <img src="https://img.icons8.com/ios-filled/25/999999/telegram-app.png" />
-                        <img src="https://img.icons8.com/ios-filled/25/999999/pinterest--v1.png" />
-                        <img src="https://img.icons8.com/ios-filled/25/999999/instagram--v1.png" />
-                    </div>
-                </section>
-
+                </div>
+                <div className="copyright">
+                    <p>Made with 💖</p>
+                    <p>@2023 All Rights Reserved</p>
+                </div>
             </footer>
         </>
     );
