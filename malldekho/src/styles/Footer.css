@@ -1,7 +1,6 @@
 footer{
     width: 100%;
-    background-color: var(--dark-primary-color);
-    /* padding: 1em; */
+    background: linear-gradient(to top, var(--darker-primary-color), var(--primary-color)) no-repeat center;
 }
 .footerContainer {
     width: 80%;
