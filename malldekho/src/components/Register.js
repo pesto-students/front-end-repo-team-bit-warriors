@@ -6,12 +6,13 @@ import "../styles/Auth.css"
 
 
 const RegisterPage = () => {
-  const [formData, setFormData] = useState({
+const initialState = {
     username: '',
     email: '',
     password: '',
     confirmPassword: '',
-  });
+  }
+  const [formData, setFormData] = useState(initialState);
 
   const [errors, setErrors] = useState({});
 
@@ -20,7 +21,7 @@ const RegisterPage = () => {
     setFormData((prevState) => ({ ...prevState, [id]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // Perform validation before submitting the form
     const errors = {};
@@ -68,7 +69,9 @@ const RegisterPage = () => {
     if (Object.keys(errors).length === 0) {
       console.log('Form submitted successfully');
       // Add your logic to handle form submission here (e.g., API call or saving to state)
-      createUser(formData);
+      await createUser(formData);
+      setFormData(initialState)
+
     //   toastr.success('Registration Successful!', 'Success', {
     //     closeButton: true,
     //     progressBar: true,

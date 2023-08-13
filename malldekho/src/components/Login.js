@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { authorizeUser } from '../services/AuthService.js'
 import "../styles/Auth.css"
 
@@ -9,7 +10,7 @@ const LoginPage = () => {
   });
 
   const [errors, setErrors] = useState({});
-
+  const navigate = useNavigate();
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData((prevState) => ({ ...prevState, [id]: value }));
@@ -47,6 +48,8 @@ const LoginPage = () => {
       console.log('Form submitted successfully');
       // Add your logic to handle form submission here (e.g., API call or authentication)
       authorizeUser(formData);
+
+      navigate(`/`);
     }
   };
 
