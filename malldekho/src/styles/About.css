@@ -1,0 +1,68 @@
+.aboutUs{
+    margin: 3em auto;
+    width: 100%;
+    max-width: 960px;
+}
+.aboutusContainer{
+    width: inherit;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 1em;
+}
+.aboutTitle{
+    display: flex;
+    flex-direction: column;
+}
+.aboutTitle h1{
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: left;
+    margin-bottom: 1em;
+}
+.aboutTitle p,
+.contributor p{
+    margin-bottom: 10px;
+    color: var(----grey-primary-color);
+    font-size: 16px;
+}
+.aboutTitle p{
+    margin-bottom: 1.5em;
+}
+.contributor{
+    display: flex;
+    flex-direction: column;
+}
+.contributor h1{
+    font-size: 40px;
+}
+.contributorFace{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 2em 0;
+    gap: 2em;
+}
+.ImgaboutusContainer{
+    width: 230px;
+    height: 200px;
+    position: relative;
+}
+.ImgaboutusContainer .ImgText{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    text-align: center;
+    padding: 5px 0;
+    color: var(--darker-primary-color);
+}
+.ImgaboutusContainer img{
+    width: 100%;
+    height: 100%;
+    /* position: absolute; */
+}
