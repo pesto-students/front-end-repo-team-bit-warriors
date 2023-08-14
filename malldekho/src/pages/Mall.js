@@ -3,7 +3,6 @@ import { FaMapMarkerAlt, FaGlobe, FaClock, FaHeart} from 'react-icons/fa';
 import { useParams } from 'react-router-dom';
 import MallService from "../services/MallService";
 import StoreService from "../services/StoreService";
-import MallImage from  "../assets/Mall.jpg"
 import MiniCard from "../components/MiniCard"
 import GiantCard from "../components/GiantCard"
 import SearchBox from "../components/SearchBox";
@@ -28,8 +27,9 @@ const MallsPage = () => {
                 const mallsData = await MallService.fetchAllMalls();
                 const myMall = mallsData.find((mall) => mall._id === mall_id);
                 setMall(myMall);
-                setFloors(myMall.floors);
+                setFloors(myMall.floors.slice(0,myMall.floorsCount));
                 setActiveFloor(myMall.floors[0]);
+
             } catch (error) {
                 console.error("Error fetching malls:", error);
             }
@@ -74,11 +74,13 @@ const MallsPage = () => {
 
                     <VerticalGrid floors={floors}  onFloorClick={onFloorClick}/>
                     <div className="floorMapStore">
-                        <MiniCard storeDataList={storesByFloor}/>
-                        {/* on floor click below component should get updated */}
-                        {/* {stores.map((store) =>
-                            store ? <MiniCard key={store._id} store={store} /> : null
-                        )} */}
+                        {storesByFloor ?
+                        (
+                            <h3 className="unavailable">Stores not available</h3>
+                        ):
+                        (
+                            <MiniCard storeDataList={storesByFloor}/>
+                        )}
 
                     </div>
                     

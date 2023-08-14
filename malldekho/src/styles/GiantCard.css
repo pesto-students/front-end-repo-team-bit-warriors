@@ -21,6 +21,7 @@
     text-transform: capitalize;
     margin: 0.5em 0 0.2em;
     font-size: 350%;
+    max-width: 80%;
   }
   
   .mallDetails h4{
@@ -48,13 +49,17 @@
     padding-top: 4px;
   }
   
-  a {
+  .location-container a {
     color: var(--darker-primary-color); 
     text-decoration: none;
     transition: color 0.2s;
+    white-space: nowrap;
+    overflow: hidden; /* Hides any overflowing content */
+    text-overflow: ellipsis;
+    max-width: 400px;
   }
   
-  a:hover {
+  .location-container a:hover {
     color: #0056b3;
   }
   .stats-container {

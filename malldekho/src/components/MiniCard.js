@@ -43,7 +43,7 @@ const MiniCard = ({ storeDataList }) => {
                 <div className="card">
                     <div className="cardImage">
                       <a href={`/store/${store._id}`}>
-                      <img src={MallImage} alt="" />
+                      <img src={store.images} alt="" />
                       </a>
                     </div>
                     <div className="cardHeader">

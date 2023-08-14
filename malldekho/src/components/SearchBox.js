@@ -6,25 +6,25 @@ import "../styles/reactAutoSuggest.css"
 import { FaSearch } from "react-icons/fa";
 
 
-const SearchBox = () => {
-    const [malls, setMalls] = useState([]); // State to store the fetched malls
+const SearchBox = ({malls}) => {
+    // const [malls, setMalls] = useState([]); // State to store the fetched malls
     const [value, setValue] = useState('');
     const [suggestions, setSuggestions] = useState([]);
     const navigate = useNavigate();
 
-    useEffect(() => {
-        // Fetch the data once the component mounts
-        async function fetchData() {
-            try {
-                const mallsData = await MallService.fetchAllMalls();
-                setMalls(mallsData);
-            } catch (error) {
-                console.error("Error fetching malls:", error);
-            }   
-        }
+    // useEffect(() => {
+    //     // Fetch the data once the component mounts
+    //     async function fetchData() {
+    //         try {
+    //             const mallsData = await MallService.fetchAllMalls();
+    //             setMalls(mallsData);
+    //         } catch (error) {
+    //             console.error("Error fetching malls:", error);
+    //         }   
+    //     }
 
-        fetchData();
-    }, [malls]); // Empty dependency array ensures the effect runs only once
+    //     fetchData();
+    // }, [malls]); // Empty dependency array ensures the effect runs only once
 
   const getSuggestions = (inputValue) => {
     console.log("Malls", malls)
