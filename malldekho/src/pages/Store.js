@@ -34,6 +34,7 @@ const StorePage = () => {
         async function fetchStores() {
             try {
                 const storeData = await StoreService.fetchStoreByID(store_id);
+                console.log(storeData)
                 setStore(storeData);
                 console.log("STORE", store)
             } catch (error) {

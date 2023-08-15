@@ -5,6 +5,7 @@ import ThumbnailText from '../components/ThumbnailText'
 
 const Home = () => {
     const thumnailHeader = "Discover your shopping paradise"
+
     return (
         <>
             <ThumbnailText text={thumnailHeader}/>

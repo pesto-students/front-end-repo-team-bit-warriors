@@ -1,12 +1,38 @@
-import React from "react";
+import React, {useState} from "react";
 import { FaMapMarkerAlt, FaGlobe, FaClock, FaHeart } from "react-icons/fa";
 import "../styles/GiantCard.css";
-import MallImage from "../assets/Mall.jpg"
 import LikeButton from "./LikeButton";
+import { useEffect } from "react";
 
 const GiantCard = ({ collection, isMall }) => {
+    console.log(collection)
+    const [address, setAddress] = useState([])
+    const [loading, setLoading] = useState(true);
 
-    const address = collection.area +" "+ collection.state +" "+ collection.city +" "+ collection.pin
+    useEffect(() => {
+        async function main() {
+            if (collection) {
+                let addressString = '';
+
+                if (isMall) {
+                    addressString += collection.area ? collection.area : '';
+                    addressString += collection.state ? ` ${collection.state}` : '';
+                    addressString += collection.city ? ` ${collection.city}` : '';
+                    addressString += collection.pin ? ` ${collection.pin}` : '';
+                } else if (collection.mall) {
+                    addressString += collection.mall.area ? collection.mall.area : '';
+                    addressString += collection.mall.state ? ` ${collection.mall.state}` : '';
+                    addressString += collection.mall.city ? ` ${collection.mall.city}` : '';
+                    addressString += collection.mall.pin ? ` ${collection.mall.pin}` : '';
+                }
+
+                await setAddress(addressString.trim());
+                setLoading(false);
+            }
+        }
+        main();
+    }, [collection, isMall]);
+
     return (
         <div className="mallContainer">
             <div className="mallDetails">
@@ -17,7 +43,11 @@ const GiantCard = ({ collection, isMall }) => {
                         <span>
 
                             <div className="icon"><FaMapMarkerAlt /></div>
-                            <a href={collection.gmaplink}>{address}</a>
+                            {loading ? (
+                                <p>Loading address...</p>
+                            ) : (
+                                <a href={collection.gmaplink}>{address}</a>
+                            )}
                         </span>
                         <span>
 
@@ -72,7 +102,7 @@ const GiantCard = ({ collection, isMall }) => {
                 </section>
             </div>
             <div className="mallImage">
-                <img src={MallImage} alt="" />
+                <img src={collection.images} alt="" />
             </div>
         </div>
     );
