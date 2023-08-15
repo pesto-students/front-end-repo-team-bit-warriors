@@ -2,6 +2,7 @@
   "name": "malldekho",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -16,7 +17,7 @@
     "react-search-autocomplete": "^8.5.2",
     "web-vitals": "^2.1.4"
   },
-  
+
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

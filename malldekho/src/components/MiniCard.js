@@ -1,7 +1,6 @@
 import React, { useState} from "react";
 import "../styles/MiniCard.css"
-import { FaPhoneSlash, FaMailBulk, FaLink, FaStar, FaRegStar } from "react-icons/fa" // Import FaRegStar for outlined star
-import MallImage from "../assets/Mall.jpg"
+import { FaPhoneSlash, FaLink, FaStar, FaRegStar } from "react-icons/fa" // Import FaRegStar for outlined star
 const CardsPerPage = 6;
 const MiniCard = ({ storeDataList }) => {
   const [currentPage, setCurrentPage] = useState(1);

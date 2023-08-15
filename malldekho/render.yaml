@@ -1,0 +1,9 @@
+routes:
+  - path: /
+    static_dir: build
+    headers:
+      Cache-Control: "public, max-age=0, must-revalidate"
+  - path: /.*
+    static_dir: build
+    headers:
+      Cache-Control: "public, max-age=0, must-revalidate"
