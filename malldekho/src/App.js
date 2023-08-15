@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Route,Switch, BrowserRouter as Router } from 'react-router-dom'
 
 import Home from './pages/Home';
 import MallPage from './pages/Mall';
@@ -18,9 +18,9 @@ const App = () => {
     <Router>
       <Header />
       <Switch>
-        {/* <Route path="/store/:store_id" component={StorePage} />
+        <Route path="/store/:store_id" component={StorePage} />
         <Route path="/mall/:mall_id" component={MallPage} />
-        <Route path="/user/:user_id" component={ProfilePage} /> */}
+        <Route path="/user/:user_id" component={ProfilePage} />
         <Route path="/contact" component={ContactUsPage} />
         <Route path="/about" component={AboutUsPage} />
         <Route path="/login" component={LoginPage} />
