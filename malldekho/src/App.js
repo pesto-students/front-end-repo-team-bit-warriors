@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Home from './pages/Home';
 import MallPage from './pages/Mall';
@@ -13,27 +13,24 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import NotFoundPage from './pages/NotFound';
 
-
 const App = () => {
   return (
     <Router>
       <Header />
-      <Routes>
-        <Route path="/mall/:mall_id" element={<MallPage />} />
-        <Route path="/store/:store_id" element={<StorePage />} />
-        <Route path="/contact" element={<ContactUsPage />} />
-        <Route path="/about" element={<AboutUsPage />} />
-        <Route path="/user/:user_id" element={<ProfilePage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/signup" element={<RegisterPage />} />
-        <Route path="/" exact element={<Home />}/>
-        <Route path="*" element={<NotFoundPage />} /> {/* Catch-all for unknown routes */}
-      </Routes>
+      <Switch>
+        <Route path="/mall/:mall_id" component={MallPage} />
+        <Route path="/store/:store_id" component={StorePage} />
+        <Route path="/contact" component={ContactUsPage} />
+        <Route path="/about" component={AboutUsPage} />
+        <Route path="/user/:user_id" component={ProfilePage} />
+        <Route path="/login" component={LoginPage} />
+        <Route path="/signup" component={RegisterPage} />
+        <Route path="/" exact component={Home} />
+        <Route path="*" component={NotFoundPage} /> {/* Catch-all for unknown routes */}
+      </Switch>
       <Footer />
     </Router>
   );
 };
-
-
 
 export default App;

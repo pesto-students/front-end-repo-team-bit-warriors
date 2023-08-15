@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import Autosuggest from 'react-autosuggest';
 import MallService from '../services/MallService';
 import "../styles/reactAutoSuggest.css"
 import { FaSearch } from "react-icons/fa";
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 
 const SearchBox = () => {
     const [malls, setMalls] = useState([]); // State to store the fetched malls
     const [value, setValue] = useState('');
     const [suggestions, setSuggestions] = useState([]);
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
+    const history = useHistory();
 
     useEffect(() => {
         // Fetch the data once the component mounts
@@ -59,7 +61,9 @@ const SearchBox = () => {
   const onSuggestionSelected = (event, { suggestion }) => {
     // Redirect user to the mall's page with the mall's name in the URL
     console.log(`/mall/${encodeURIComponent(suggestion.name)}`)
-    navigate(`/mall/${encodeURIComponent(suggestion._id)}`);
+    // navigate(`/mall/${encodeURIComponent(suggestion._id)}`);
+    history.push(`/mall/${encodeURIComponent(suggestion._id)}`);
+    
   };
 
   const onChange = (event, { newValue }) => {

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { authorizeUser } from '../services/AuthService.js'
 import "../styles/Auth.css"
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min.js";
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({
@@ -10,7 +11,8 @@ const LoginPage = () => {
   });
 
   const [errors, setErrors] = useState({});
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
+  const history = useHistory();
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData((prevState) => ({ ...prevState, [id]: value }));
@@ -49,7 +51,8 @@ const LoginPage = () => {
       // Add your logic to handle form submission here (e.g., API call or authentication)
       authorizeUser(formData);
 
-      navigate(`/`);
+      // navigate(`/`);
+      history.push(`/`);
     }
   };
 
