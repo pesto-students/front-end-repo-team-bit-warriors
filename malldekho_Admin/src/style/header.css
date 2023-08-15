@@ -1,0 +1,83 @@
+.flexContainer {
+    display: flex;
+  }
+  
+  .header {
+    display: inline;
+    margin-left: 30px;
+    font-family: 'Poppins';
+    font-size: 32px;
+    width: 30%;
+    font-weight: 500;
+  }
+  
+  .inputContainer {
+    display: -webkit-inline-flex;
+    height: 49px;
+    width: 387px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 38.5%;
+    padding-top: 8px;
+    background-color: white;
+    border-radius: 28px;
+    margin-top: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
+  
+  .profileImageContainer {
+    height: 42px;
+    width: 42px;
+    margin-left: 39px;
+    border-radius: 21px;
+    overflow: hidden;
+  }
+  
+  .profileImage {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .statsContainer {
+    height: 100px;
+    width: 95%;
+    margin-left: 1%;
+    background-color: #dfccf2;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
+  
+  .statItem {
+    display: -webkit-inline-flex;
+  }
+  
+  .statImageContainer {
+    height: 56%;
+    width: 56%;
+    margin-top: 20px;
+  }
+  
+  .statImage {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .statInfo {
+    margin-left: 0px;
+    width: 120px;
+  }
+  
+  .statLabel {
+    opacity: 0.4;
+  }
+  
+  .statValue {
+    margin-top: -15px;
+  }
+  
+  .outletContainer {
+    /* Your Outlet styles here */
+  }

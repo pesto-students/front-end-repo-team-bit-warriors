@@ -1,0 +1,35 @@
+.main{
+  height: 600px;
+  width: 95%;
+  background-color: transparent;
+  margin-top: 20px;
+  margin-left: 1%;
+  border-radius: 10px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-title {
+  display: inline-flex;
+  margin-left: 31px;
+  margin-top: 19px;
+  font-family: 'Poppins';
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.icon-container {
+  display: inline-flex;
+  flex-direction: row;
+  margin-left: 310px;
+}
+
+.icon {
+  margin-top: 8%;
+  padding-right: 10px;
+}
+
+

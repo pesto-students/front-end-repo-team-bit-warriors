@@ -1,0 +1,11 @@
+.textFieldContainer{
+
+    display: inline-flex;
+    flex-direction: column;
+
+}
+.errorContainer{
+    display: inline;
+    margin-left: 40px;
+    color: red;
+}
