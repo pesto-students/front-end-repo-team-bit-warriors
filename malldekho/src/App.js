@@ -18,11 +18,11 @@ const App = () => {
     <Router>
       <Header />
       <Switch>
+        {/* <Route path="/store/:store_id" component={StorePage} />
         <Route path="/mall/:mall_id" component={MallPage} />
-        <Route path="/store/:store_id" component={StorePage} />
+        <Route path="/user/:user_id" component={ProfilePage} /> */}
         <Route path="/contact" component={ContactUsPage} />
         <Route path="/about" component={AboutUsPage} />
-        <Route path="/user/:user_id" component={ProfilePage} />
         <Route path="/login" component={LoginPage} />
         <Route path="/signup" component={RegisterPage} />
         <Route path="/" exact component={Home} />
