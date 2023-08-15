@@ -1,10 +1,12 @@
 import axios from 'axios';
 import qs from 'qs';
+import GlobalService from './GlobalService';
 
 
 const UserService = {
   fetchAllUsers: async () => {
-    const response = await axios.get('http://localhost:3000/users');
+    const fetchUrl = `${GlobalService.BASE_URI}/users`
+    const response = await axios.get(fetchUrl);
 
     if(response.status === 200) {
         return response.data;
@@ -15,7 +17,7 @@ const UserService = {
   },
 
   fetchUserById: async (UserId) => {
-    const fetchUrl = `http://localhost:3000/users/${UserId}`
+    const fetchUrl = `${GlobalService.BASE_URI}/users/${UserId}`
     const response = await axios.get(fetchUrl, {
       headers: {
         'Content-Type': 'application/json',
@@ -39,8 +41,8 @@ const UserService = {
             "phone": reqBody.phone,
             "image": reqBody.image
         });
-
-        const updateUrl= `http://localhost:3000/users/${reqBody._id}/`
+        
+        const updateUrl= `${GlobalService.BASE_URI}/users/${reqBody._id}/`
         const response = await axios.put(updateUrl, reqData, {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',

@@ -1,8 +1,10 @@
 import axios from 'axios';
 import qs from 'qs';
+import GlobalService from './GlobalService';
 // import toastr from 'toastr';
 // import 'toastr/build/toastr.min.css';
 
+const BASE_URI= GlobalService.BASE_URI;
 const authorizeUser = async (reqBody) => {
     try {
         let data = qs.stringify({
@@ -12,7 +14,7 @@ const authorizeUser = async (reqBody) => {
         let config = {
             method: 'post',
             maxBodyLength: Infinity,
-            url: 'http://localhost:3000/login',
+            url: `${BASE_URI}/login`,
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
@@ -47,7 +49,7 @@ const createUser = async (reqBody) => {
         let config = {
             method: 'post',
             maxBodyLength: Infinity,
-            url: 'http://localhost:3000/users/',
+            url: `${BASE_URI}/users`,
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },

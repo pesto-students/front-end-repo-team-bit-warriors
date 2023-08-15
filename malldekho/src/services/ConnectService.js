@@ -1,5 +1,7 @@
 import axios from 'axios';
 import qs from 'qs';
+import GlobalService from './GlobalService';
+
 const ConnectService = {
     createConnect: async (reqBody) => {
         console.log(reqBody)
@@ -12,8 +14,8 @@ const ConnectService = {
                 "comments": reqBody.comment
             });
 
-
-            const response = await axios.post('http://localhost:3000/contact', reqData, {
+            const postUrl = `${GlobalService.BASE_URI}/contact`
+            const response = await axios.post(postUrl, reqData, {
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
                 },
