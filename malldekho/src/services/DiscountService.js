@@ -1,9 +1,10 @@
 import axios from 'axios';
 import GlobalService from './GlobalService';
 
-const MallService = {
-  fetchAllMalls: async () => {
-    const fetchUrl = `${GlobalService.BASE_URI}/malls`
+const DiscountService = {
+
+  fetchDiscountByStoreId: async (storeId) => {
+    const fetchUrl = `${GlobalService.BASE_URI}/discount?store_id=${storeId}`
     const response = await axios.get(fetchUrl, {
       headers: {
         'Access-Control-Allow-Origin': '*'
@@ -19,4 +20,4 @@ const MallService = {
   },
 };
 
-export default MallService;
+export default DiscountService;

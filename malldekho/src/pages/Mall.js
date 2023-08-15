@@ -74,7 +74,7 @@ const MallsPage = () => {
 
                     <VerticalGrid floors={floors}  onFloorClick={onFloorClick}/>
                     <div className="floorMapStore">
-                        {storesByFloor ?
+                        {storesByFloor.length===0 ?
                         (
                             <h3 className="unavailable">Stores not available</h3>
                         ):
