@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import UserService from "../services/UserService";
 import { useEffect } from "react";
-import { useParams } from "react-router-dom";
 import P1 from "../assets/P1.png"
-import "../styles/Profile.css"
+import "../styles/Profile.css";
+import Cookies from 'js-cookie';
+import jwt_decode from "jwt-decode";
 
 
 
 
 const ProfilePage = () => {
+
     
     const intialState = {
         firstname: "",
@@ -17,22 +19,37 @@ const ProfilePage = () => {
         phone: "",
         image: ""
     }
-    const [formData, setFormData] = useState(intialState);
-    const {user_id} = useParams();
+
+    const [formData, setFormData] = useState([intialState]);
+    const [userId, setUserId] = useState([]);
+
+    useEffect(() => {
+        const token = Cookies.get('authCookie');
+        if (token) {
+            try {
+                const decodedToken = jwt_decode(token);
+                console.log(decodedToken)
+                setUserId(decodedToken._id);
+            } catch (error) {
+                console.error('Error decoding token:', error);
+            }
+        }
+    }, []);
+    
 
     useEffect(() => {
 
         async function fetchUser() {
             try {
-                const userData = await UserService.fetchUserById(user_id);
-                console.log(userData, formData)
+                const userData = await UserService.fetchUserById(userId);
                 setFormData(userData)
+                console.log(userData, formData)
             } catch (error) {
                 console.error("Error fetching user details:", error);
             }
         }
         fetchUser();
-    }, [user_id])
+    }, [userId])
 
 
     const handleInputChange = (e) => {
@@ -46,7 +63,6 @@ const ProfilePage = () => {
 
 
     const handleSubmit = async () => {
-        // e.preventDefault();
         console.log("formData", formData)
         await UserService.updateUserById(formData)
     }
@@ -69,7 +85,7 @@ const ProfilePage = () => {
                         <input
                             type="text"
                             name="firstname"
-                            value={formData.firstname}
+                            value={formData?.firstname}
                             onChange={handleInputChange}
                             placeholder="John Doe"
                         />
@@ -79,7 +95,7 @@ const ProfilePage = () => {
                         <input
                             type="email"
                             name="email"
-                            value={formData.email}
+                            value={formData?.email}
                             onChange={handleInputChange}
                             placeholder="John.Doe@gmail.com"
                         />
@@ -89,7 +105,7 @@ const ProfilePage = () => {
                         <input
                             type="text"
                             name="name"
-                            value={formData.username}
+                            value={formData?.username}
                             onChange={handleInputChange}
                             placeholder="JohnIsMe"
                         />
@@ -99,7 +115,7 @@ const ProfilePage = () => {
                         <input
                             type="phone"
                             name="phone"
-                            value={formData.phone}
+                            value={formData?.phone}
                             onChange={handleInputChange}
                             placeholder="384593453"
                         />

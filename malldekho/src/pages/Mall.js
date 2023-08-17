@@ -9,8 +9,8 @@ import SearchBox from "../components/SearchBox";
 import VerticalGrid from "../components/VerticalGrid";
 // import "../styles/Mall.css"
 import "../styles/FloorMap.css"
-import Skeleton from 'react-loading-skeleton'
-import 'react-loading-skeleton/dist/skeleton.css'
+// import Skeleton from 'react-loading-skeleton'
+// import 'react-loading-skeleton/dist/skeleton.css'
 
 const isMall = true;
 
@@ -69,7 +69,7 @@ const MallsPage = () => {
     }
     return (
         <>
-            <Skeleton variant="rectangular" width={210} height={118} />
+            {/* <Skeleton variant="rectangular" width={210} height={118} /> */}
             <GiantCard collection={mall} isMall={isMall}/>
             <SearchBox/>
             <div className="storeInMalls">
