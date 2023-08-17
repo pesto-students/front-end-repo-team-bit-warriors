@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
 import StoreService from "../services/StoreService";
-import MallImage from  "../assets/Mall.jpg"
-import MiniCard from "../components/MiniCard"
 import GiantCard from "../components/GiantCard"
 import DiscountService from "../services/DiscountService";
+import "../styles/Discount.css"
 
 const isMall = false;
 
@@ -48,30 +47,35 @@ const StorePage = () => {
     return (
         <>
             <GiantCard collection={store} isMall={isMall}/>
-            <section className="discountContainer">
-                <h1>Most Popular Offers</h1>
-                {discounts.map((discount) => (
-                    <div key={discount._id} className="card">
-                        <div className="card">
-                            <div className="cardImage">
-                            {/* <a href={`/store/${store._id}`}> */}
-                            <img src={discount.images} alt="" />
-                            {/* </a> */}
+            { discounts ? (
+                <section className="discountContainer">
+                    <h1>Most Popular Offers</h1>
+                        <div className="cards">
+                        {discounts.map((discount) => (
+                            <div  key={discount._id} className="card">
+                                <div className="cardImage">
+                                {/* <a href={`/store/${store._id}`}> */}
+                                <img src={discount.images} alt="" />
+                                {/* </a> */}
+                                </div>
+                                <div className="cardHeader">
+                                    {discount?.name}
+                                    {discount?.discountPercentage}%
+                                </div>
+                                <div className="cardInfo">
+                                <span>
+                                    <div className="icon"></div>
+                                    <p>Ending on : {discount.endDate}</p>
+                                </span>
+                                </div>
                             </div>
-                            <div className="cardHeader">
-                                {discount?.name}
-                                {discount?.discountPercentage}%
-                            </div>
-                            <div className="cardInfo">
-                            <span>
-                                <div className="icon"></div>
-                                <p>Ending on : {discount.endDate}</p>
-                            </span>
-                            </div>
+                            ))}
                         </div>
-                    </div>
-                ))}
-            </section>
+                </section>
+            ) : 
+            (
+                <h1> Discount not available </h1>
+            )}
         </>
     );
 };

@@ -69,11 +69,11 @@ const GiantCard = ({ collection, isMall }) => {
                             <p>Floors</p>
                         </span>
                         <span>
-                            <div className="statNumber">{collection.serviceProvider}</div>
+                            <div className="statNumber">{collection.serviceProvider ? collection.serviceProvider : 30 }</div>
                             <p>Service Provider</p>
                         </span>
                         <span>
-                            <div className="statNumber">{collection.shops}</div>
+                            <div className="statNumber">{collection.shops? collection.shops : 150 }</div>
                             <p>Brands</p>
                         </span>
                         <LikeButton/>
@@ -83,15 +83,15 @@ const GiantCard = ({ collection, isMall }) => {
 
                     <div className="stats-container">
                         <span>
-                            <div className="statNumber">{collection.discountCount}</div>
+                            <div className="statNumber">{collection.discountCount ? collection.discountCount : 3}</div>
                             <p>Discounts</p>
                         </span>
                         <span>
-                            <div className="statNumber">{collection.upcomingDiscount}</div>
+                            <div className="statNumber">{collection.upcomingDiscount ? collection.upcomingDiscount: 2}</div>
                             <p>Upcoming Discount</p>
                         </span>
                         <span>
-                            <div className="statNumber">{collection.dailySearch}</div>
+                            <div className="statNumber">{collection.dailySearch ? collection.dailySearch : 20}</div>
                             <p>Daily Search</p>
                         </span>
                         <LikeButton/>

@@ -1,6 +1,7 @@
 import axios from 'axios';
 import qs from 'qs';
 import GlobalService from './GlobalService';
+import Cookies from 'js-cookie';
 // import toastr from 'toastr';
 // import 'toastr/build/toastr.min.css';
 
@@ -24,7 +25,13 @@ const authorizeUser = async (reqBody) => {
 
         axios.request(config)
             .then((response) => {
-                console.log(JSON.stringify(response.data));
+                const headers = { ...response.headers };
+                console.log("headers", headers)
+                const authToken = response.headers['x-auth-token']
+                console.log("LOGGIN TOKEN", authToken)
+                if (authToken) {
+                    Cookies.set('authCookie', authToken, { expires: 2 }); // 2 days expiry
+                }
                 // toastr.success('Login Successful!', 'Success', {
                 //     closeButton: true,
                 //     progressBar: true,

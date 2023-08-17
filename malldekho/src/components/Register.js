@@ -3,6 +3,8 @@ import { createUser } from '../services/AuthService.js'
 import "../styles/Auth.css"
 // import toastr from 'toastr';
 // import 'toastr/build/toastr.min.css';
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min.js";
+
 
 
 const RegisterPage = () => {
@@ -15,6 +17,7 @@ const initialState = {
   const [formData, setFormData] = useState(initialState);
 
   const [errors, setErrors] = useState({});
+  const history = useHistory();
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -71,6 +74,7 @@ const initialState = {
       // Add your logic to handle form submission here (e.g., API call or saving to state)
       await createUser(formData);
       setFormData(initialState)
+      history.push(`/login`);
 
     //   toastr.success('Registration Successful!', 'Success', {
     //     closeButton: true,
@@ -87,6 +91,8 @@ const initialState = {
           <input
             type="text"
             id="username"
+            name="username"
+
             placeholder="Username"
             onChange={handleChange}
           />
@@ -95,6 +101,7 @@ const initialState = {
           <input
             type="email"
             id="email"
+            name="email"
             placeholder="name@example.com"
             onChange={handleChange}
           />
@@ -103,6 +110,7 @@ const initialState = {
           <input
             type="password"
             id="password"
+            name="password"
             placeholder="Password"
             onChange={handleChange}
           />
@@ -111,6 +119,7 @@ const initialState = {
           <input
             type="password"
             id="confirmPassword"
+            name="confirmPassword"
             placeholder="Confirm Password"
             onChange={handleChange}
           />
