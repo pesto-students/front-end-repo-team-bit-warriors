@@ -16,6 +16,7 @@ const authorizeUser = async (reqBody) => {
             method: 'post',
             maxBodyLength: Infinity,
             url: `${BASE_URI}/login`,
+            withCredentials: true,
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
@@ -24,20 +25,14 @@ const authorizeUser = async (reqBody) => {
 
         axios.request(config)
             .then((response) => {
-                const headers = { ...response.headers };
-                console.log("headers", headers)
-                const authToken = response.headers['x-auth-token']
-                console.log("LOGGIN TOKEN", authToken)
-                if (authToken) {
-                    Cookies.set('authCookie', authToken, { expires: 2 }); // 2 days expiry
-                }
+                console.log(response)
                 // toastr.success('Login Successful!', 'Success', {
                 //     closeButton: true,
                 //     progressBar: true,
                 // });
             })
             .catch((error) => {
-                console.log(error.response.data);
+                console.log(error);
             });
 
     } catch (error) {
@@ -77,4 +72,13 @@ const createUser = async (reqBody) => {
     }
 }
 
-export { authorizeUser, createUser} ;
+
+const isLoggedIn = () => {
+    const ck = Cookies.get('authCookie')
+    if (ck) {
+        return true
+    }
+    return false
+}
+
+export { authorizeUser, createUser, isLoggedIn} ;
