@@ -15,6 +15,7 @@ const authorizeUser = async (reqBody) => {
             method: 'post',
             maxBodyLength: Infinity,
             url: `${BASE_URI}/login`,
+            withCredentials: true,
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
@@ -30,7 +31,7 @@ const authorizeUser = async (reqBody) => {
                 // });
             })
             .catch((error) => {
-                console.log(error.response.data);
+                console.log(error);
             });
 
     } catch (error) {
