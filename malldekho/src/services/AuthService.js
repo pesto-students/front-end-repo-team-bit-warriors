@@ -27,7 +27,12 @@ const authorizeUser = async (reqBody) => {
             .then((response) => {
                 console.log(response)
                 const headers = response.data.token;
-                console.log('Token',headers);
+                Cookies.set('authCookie', headers, {
+                    expires: 1, // Cookie will expire after 1 day
+                    secure: true, // Only send cookie over HTTPS
+                    sameSite: 'none' // Allow cross-site requests
+                  });
+                //console.log('Token',headers);
                 toastr.success('Login Successful!', 'Success', {
                     closeButton: true,
                     progressBar: true,
