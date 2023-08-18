@@ -16,7 +16,7 @@ const authorizeUser = async (reqBody) => {
             method: 'post',
             maxBodyLength: Infinity,
             url: `${BASE_URI}/login`,
-            // withCredentials: true,
+            withCredentials: true,
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
