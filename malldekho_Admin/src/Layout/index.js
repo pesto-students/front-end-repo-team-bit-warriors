@@ -20,6 +20,7 @@ import Logout from "../Images/Logout.svg"
 import Network from "../Images/network.svg"
 import Profile from "../Images/Profile.svg"
 import MallDekho from "../Images/mallDekho.svg"
+import { useNavigate } from "react-router-dom";
 const toolsLinkArray = [
     {
         path: "tracker/dashboard",
@@ -99,6 +100,7 @@ const Drawer = styled(MuiDrawer, {
 }));
 
 export default function Dashboardlayout() {
+    const navigate= useNavigate();
 
     useEffect(() => {
         console.log(" dashboard layput page")
@@ -113,6 +115,12 @@ export default function Dashboardlayout() {
     const handleDrawerClose = () => {
         setOpen(false);
     };
+
+    const handleLogout=()=>{
+        localStorage.clear();
+        navigate("/");
+
+    }
 
     return (
         <>
@@ -222,7 +230,7 @@ export default function Dashboardlayout() {
                                             // justifyContent: 'center',
                                         }}
                                     >
-                                        <img src={Logout} />
+                                        <img src={Logout} onClick={handleLogout} />
                                     </ListItemIcon>
                                     <ListItemText
                                         primary="Logout"
