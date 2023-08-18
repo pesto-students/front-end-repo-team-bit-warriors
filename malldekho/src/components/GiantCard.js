@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { FaMapMarkerAlt, FaGlobe, FaClock, FaHeart } from "react-icons/fa";
+import { FaMapMarkerAlt, FaGlobe, FaClock } from "react-icons/fa";
 import "../styles/GiantCard.css";
 import LikeButton from "./LikeButton";
 import { useEffect } from "react";
