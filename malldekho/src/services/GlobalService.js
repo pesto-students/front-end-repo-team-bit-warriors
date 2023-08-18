@@ -2,8 +2,8 @@ import Cookies from 'js-cookie';
 import jwt_decode from "jwt-decode";
 
 const GlobalService = {
-  // BASE_URI: "https://malldekho-service.onrender.com",
-  BASE_URI: "http://localhost:3000",
+  BASE_URI: "https://malldekho-service.onrender.com",
+  // BASE_URI: "http://localhost:3000",
   USER_ID: async () => {
     const token = Cookies.get('authCookie');
     if (token) {
