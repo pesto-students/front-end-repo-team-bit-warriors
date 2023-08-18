@@ -2,8 +2,8 @@ import axios from 'axios';
 import qs from 'qs';
 import GlobalService from './GlobalService';
 import Cookies from 'js-cookie';
-// import toastr from 'toastr';
-// import 'toastr/build/toastr.min.css';
+import toastr from 'toastr';
+import 'toastr/build/toastr.min.css';
 
 const BASE_URI= GlobalService.BASE_URI;
 const authorizeUser = async (reqBody) => {
@@ -26,10 +26,10 @@ const authorizeUser = async (reqBody) => {
         axios.request(config)
             .then((response) => {
                 console.log(response)
-                // toastr.success('Login Successful!', 'Success', {
-                //     closeButton: true,
-                //     progressBar: true,
-                // });
+                toastr.success('Login Successful!', 'Success', {
+                    closeButton: true,
+                    progressBar: true,
+                });
             })
             .catch((error) => {
                 console.log(error);

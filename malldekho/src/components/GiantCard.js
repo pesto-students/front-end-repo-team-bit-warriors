@@ -3,12 +3,10 @@ import { FaMapMarkerAlt, FaGlobe, FaClock } from "react-icons/fa";
 import "../styles/GiantCard.css";
 import LikeButton from "./LikeButton";
 import { useEffect } from "react";
-import GlobalService from "../services/GlobalService";
 
 const GiantCard = ({ collection, isMall }) => {
     const [address, setAddress] = useState([])
     const [loading, setLoading] = useState(true);
-    const [liked, setLiked] = useState(false)
 
     useEffect(() => {
         async function main() {
@@ -35,27 +33,21 @@ const GiantCard = ({ collection, isMall }) => {
     }, [collection, isMall]);
 
 
-    const onAddFav = (isAdded) => {
-        console.log("clicke fav button")
-        if(isAdded){
-            const favData = {
-                user: GlobalService.USER_ID(),
-            }
-            if(isMall){
-                favData["mall"]=collection._id
-            }else{
-                favData["store"]=collection._id
-            }
-            console.log(favData);
-        }
-    }
+    // const onAddFav = (isAdded) => {
+    //     console.log("clicke fav button")
+    //     if(isAdded){
+    //         const favData = {
+    //             user: GlobalService.USER_ID(),
+    //         }
+    //         if(isMall){
+    //             favData["mall"]=collection._id
+    //         }else{
+    //             favData["store"]=collection._id
+    //         }
+    //         console.log(favData);
+    //     }
+    // }
 
-    const handleLike = () => {
-        console.log("sese")
-        setLiked(!liked);
-        onAddFav(true);
-
-    };
     return (
         <div className="mallContainer">
             <div className="mallDetails">
@@ -117,7 +109,7 @@ const GiantCard = ({ collection, isMall }) => {
                             <div className="statNumber">{collection.dailySearch ? collection.dailySearch : 20}</div>
                             <p>Daily Search</p>
                         </span>
-                        <LikeButton liked={liked} handleLike={handleLike}  />
+                        <LikeButton />
 
                     </div>
 

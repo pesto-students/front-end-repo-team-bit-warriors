@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { createUser } from '../services/AuthService.js'
 import "../styles/Auth.css"
-// import toastr from 'toastr';
-// import 'toastr/build/toastr.min.css';
+import toastr from 'toastr';
+import 'toastr/build/toastr.min.css';
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min.js";
 
 
@@ -76,10 +76,10 @@ const initialState = {
       setFormData(initialState)
       history.push(`/login`);
 
-    //   toastr.success('Registration Successful!', 'Success', {
-    //     closeButton: true,
-    //     progressBar: true,
-    //   });
+      toastr.success('Registration Successful!', 'Success', {
+        closeButton: true,
+        progressBar: true,
+      });
     }
   };
 
