@@ -68,6 +68,9 @@ const MallsPage = () => {
         const storesByFloor = stores.filter(store => store.floor === floorName)
         setStoresByFloor(storesByFloor)
     }
+
+
+
     return (
         <>
             {loader ? (
