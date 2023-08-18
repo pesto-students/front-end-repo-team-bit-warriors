@@ -26,6 +26,8 @@ const authorizeUser = async (reqBody) => {
         axios.request(config)
             .then((response) => {
                 console.log(response)
+                const headers = response.data.token;
+                console.log('Token',headers);
                 toastr.success('Login Successful!', 'Success', {
                     closeButton: true,
                     progressBar: true,
