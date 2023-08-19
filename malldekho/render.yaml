@@ -1,0 +1,17 @@
+routes:
+  - path: /mall/:mall_id
+    static_dir: build
+  - path: /store/:store_id
+    static_dir: build
+  - path: /contact
+    static_dir: build
+  - path: /about
+    static_dir: build
+  - path: /user/:user_id
+    static_dir: build
+  - path: /login
+    static_dir: build
+  - path: /signup
+    static_dir: build
+  - path: /.*
+    static_dir: build

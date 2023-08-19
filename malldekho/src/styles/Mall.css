@@ -1,0 +1,13 @@
+
+
+.giantCardSkeleton{
+  display: flex;
+  gap: 2em;
+  width: 80%;
+  margin: 4em auto;
+}
+.giantCardSkeleton section{
+  display: flex;
+  flex-direction: column;
+  gap:1em;
+}

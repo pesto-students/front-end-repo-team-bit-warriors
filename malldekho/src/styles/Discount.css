@@ -1,0 +1,18 @@
+.discountContainer {
+    width: 80%;
+    margin: 1em auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    flex-wrap: wrap;
+    margin: 1em 0 2em;
+}

@@ -1,0 +1,10 @@
+.like-button {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    /* transition: background-color 0.3s; */
+  }
+  .like-icon {
+    font-size: 4em;
+    margin: 0 0 10px 20px;
+  }
