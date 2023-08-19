@@ -66,7 +66,7 @@ const LoginPage = () => {
       let config = {
           method: 'post',
           maxBodyLength: Infinity,
-          url: `http://localhost:30001/admin/login`,
+          url: `https://malldekho-service.onrender.com/admin/login`,
           // withCredentials: true,
           headers: {
               'Content-Type': 'application/x-www-form-urlencoded'

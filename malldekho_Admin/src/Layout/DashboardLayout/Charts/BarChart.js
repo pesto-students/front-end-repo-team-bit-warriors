@@ -14,12 +14,145 @@ import {
 
 const barColors = ['#4c5f7c', '#dc2424', '#fcda00', '#8383ba', '#23dbbd', '#8383ba', '#23dbbd'];
 
+const arr = [{
+  email: "mamta@me.com",
+  joinedAt:  "2023-08-16T18:37:30.750Z",
+  lastLoggedIn:"2023-08-19T13:37:49.918Z",
+  password:"$2b$10$6FaWtVRSZ4kTIOKp7IKbOeIpY/AtHzI5a0IkLYd.VR0chpBMdlUFm",
+  username:"mamta",
+  __v:0,
+  _id:"64dd176a55054d618846861a"
+},
+{
+  email: "mamta@me.com",
+  joinedAt:  "2023-08-16T18:37:30.750Z",
+  lastLoggedIn:"2023-08-19T03:37:49.918Z",
+  password:"$2b$10$6FaWtVRSZ4kTIOKp7IKbOeIpY/AtHzI5a0IkLYd.VR0chpBMdlUFm",
+  username:"mamta",
+  __v:0,
+  _id:"64dd176a55054d618846861a"
+},
+{
+  email: "mamta@me.com",
+  joinedAt:  "2023-08-16T18:37:30.750Z",
+  lastLoggedIn:"2023-08-19T22:37:49.918Z",
+  password:"$2b$10$6FaWtVRSZ4kTIOKp7IKbOeIpY/AtHzI5a0IkLYd.VR0chpBMdlUFm",
+  username:"mamta",
+  __v:0,
+  _id:"64dd176a55054d618846861a"
+},
+{
+  email: "mamta@me.com",
+  joinedAt:  "2023-08-16T18:37:30.750Z",
+  lastLoggedIn:"2023-08-10T09:37:49.918Z",
+  password:"$2b$10$6FaWtVRSZ4kTIOKp7IKbOeIpY/AtHzI5a0IkLYd.VR0chpBMdlUFm",
+  username:"mamta",
+  __v:0,
+  _id:"64dd176a55054d618846861a"
+},{
+  email: "mamta@me.com",
+  joinedAt:  "2023-08-16T18:37:30.750Z",
+  lastLoggedIn:"2023-08-19T03:37:49.918Z",
+  password:"$2b$10$6FaWtVRSZ4kTIOKp7IKbOeIpY/AtHzI5a0IkLYd.VR0chpBMdlUFm",
+  username:"mamta",
+  __v:0,
+  _id:"64dd176a55054d618846861a"
+},
+{
+  email: "mamta@me.com",
+  joinedAt:  "2023-08-16T18:37:30.750Z",
+  lastLoggedIn:"2023-08-19T18:18:49.918Z",
+  password:"$2b$10$6FaWtVRSZ4kTIOKp7IKbOeIpY/AtHzI5a0IkLYd.VR0chpBMdlUFm",
+  username:"mamta",
+  __v:0,
+  _id:"64dd176a55054d618846861a"
+},
+{
+  email: "mamta@me.com",
+  joinedAt:  "2023-08-16T18:37:30.750Z",
+  lastLoggedIn:"2023-08-19T23:37:49.918Z",
+  password:"$2b$10$6FaWtVRSZ4kTIOKp7IKbOeIpY/AtHzI5a0IkLYd.VR0chpBMdlUFm",
+  username:"mamta",
+  __v:0,
+  _id:"64dd176a55054d618846861a"
+},
+{
+  email: "mamta@me.com",
+  joinedAt:  "2023-08-16T18:37:30.750Z",
+  lastLoggedIn:"2023-08-19T14 :37:49.918Z",
+  password:"$2b$10$6FaWtVRSZ4kTIOKp7IKbOeIpY/AtHzI5a0IkLYd.VR0chpBMdlUFm",
+  username:"mamta",
+  __v:0,
+  _id:"64dd176a55054d618846861a"
+},
+
+{
+  email: "mamta@me.com",
+  joinedAt:  "2023-08-16T18:37:30.750Z",
+  lastLoggedIn:"2023-08-19T03:37:49.918Z",
+  password:"$2b$10$6FaWtVRSZ4kTIOKp7IKbOeIpY/AtHzI5a0IkLYd.VR0chpBMdlUFm",
+  username:"mamta",
+  __v:0,
+  _id:"64dd176a55054d618846861a"
+},
+{
+  email: "mamta@me.com",
+  joinedAt:  "2023-08-16T18:37:30.750Z",
+  lastLoggedIn:"2023-08-19T22:37:49.918Z",
+  password:"$2b$10$6FaWtVRSZ4kTIOKp7IKbOeIpY/AtHzI5a0IkLYd.VR0chpBMdlUFm",
+  username:"mamta",
+  __v:0,
+  _id:"64dd176a55054d618846861a"
+},
+{
+  email: "mamta@me.com",
+  joinedAt:  "2023-08-16T18:37:30.750Z",
+  lastLoggedIn:"2023-08-10T09:37:49.918Z",
+  password:"$2b$10$6FaWtVRSZ4kTIOKp7IKbOeIpY/AtHzI5a0IkLYd.VR0chpBMdlUFm",
+  username:"mamta",
+  __v:0,
+  _id:"64dd176a55054d618846861a"
+},{
+  email: "mamta@me.com",
+  joinedAt:  "2023-08-16T18:37:30.750Z",
+  lastLoggedIn:"2023-08-19T03:37:49.918Z",
+  password:"$2b$10$6FaWtVRSZ4kTIOKp7IKbOeIpY/AtHzI5a0IkLYd.VR0chpBMdlUFm",
+  username:"mamta",
+  __v:0,
+  _id:"64dd176a55054d618846861a"
+},
+{
+  email: "mamta@me.com",
+  joinedAt:  "2023-08-16T18:37:30.750Z",
+  lastLoggedIn:"2023-08-19T18:18:49.918Z",
+  password:"$2b$10$6FaWtVRSZ4kTIOKp7IKbOeIpY/AtHzI5a0IkLYd.VR0chpBMdlUFm",
+  username:"mamta",
+  __v:0,
+  _id:"64dd176a55054d618846861a"
+},
+{
+  email: "mamta@me.com",
+  joinedAt:  "2023-08-16T18:37:30.750Z",
+  lastLoggedIn:"2023-08-19T23:37:49.918Z",
+  password:"$2b$10$6FaWtVRSZ4kTIOKp7IKbOeIpY/AtHzI5a0IkLYd.VR0chpBMdlUFm",
+  username:"mamta",
+  __v:0,
+  _id:"64dd176a55054d618846861a"
+},
+{
+  email: "mamta@me.com",
+  joinedAt:  "2023-08-16T18:37:30.750Z",
+  lastLoggedIn:"2023-08-19T14 :37:49.918Z",
+  password:"$2b$10$6FaWtVRSZ4kTIOKp7IKbOeIpY/AtHzI5a0IkLYd.VR0chpBMdlUFm",
+  username:"mamta",
+  __v:0,
+  _id:"64dd176a55054d618846861a"
+}]
+
 const data = [
   {
     name: "00",
-    uv: 4000,
     pv: 6400,
-    amt: 2400
   },
   {
     name: "04",
@@ -59,45 +192,156 @@ const data = [
   }
 ];
 
+const Data1=[ {
+  name: "00",
+  pv: 0,
+},
+{
+  name: "04",
+  pv: 0,
+},
+{
+  name: "08",
+  pv: 0,
+},
+{
+  name: "12",
+  pv: 0,
+},
+{
+  name: "16",
+  pv: 0,
+},
+{
+  name: "20",
+  pv: 0,
+},
+{
+  name: "24",
+  pv: 0,
+}]
+
 export default function BarChartData() {
 
-  const [UserListData, setUserListData]= useState([]);
+  const[myArray,setMyArray]=useState(Data1)
+  const [dailyTrafic, setdailyTrafic]=useState(0)
+  // const [UserListData, setUserListData]= useState([]);
   const [today]= useState(new Date().getDate());
+  
   useEffect(()=>{
-  //  let isoTimeString= "2023-08-12T06:36:06.565Z"
-  //    let  parsedDate = new Date("2023-08-12T06:36:06.565Z")
+  //  console.log("array data",arr[0].lastLoggedIn)
+  //  let lastLoggedIn="2023-08-19T18:37:49.918Z"
+  //  console.log("last Login date",new Date(lastLoggedIn).getUTCDate());
+  
+  //  let lastLog=new Date(lastLoggedIn).getUTCDate()
 
-  //    const day = parsedDate.getUTCDate();
-  //    console.log("_________today date__________",day)
+
+
+    // console.log("_________today date__________",new Date().getDate())
+
+  //  let isoTimeString= "2023-08-12T06:36:06.565Z"
+    //  let  parsedDate = new Date("2023-08-12T06:36:06.565Z")
+
+    //  const day = parsedDate.getUTCDate();
+    //  console.log("_________today date__________",day)
   //    const hours = parsedDate.getUTCHours();
   //    console.log("_________hours__________",hours)
   getUsers()
-  console.log("_________today date__________",new Date().getDate())
-  })
+  // const condition = (element) => element.lastLoggedIn == new Date().getDate();
+
+ 
+  },[])
+
+  console.log(">>>>>>>>>>final Array>>>>>>>>",Data1)
 
   
 const getUsers = async()=>{
-  try {           
-      const response = await axios.get(`http://localhost:30001/users`); 
-      console.log("Response From Api......",response.data);
-      if(response.data)
+
+  const filteredData = arr.filter((element) => new Date(element.lastLoggedIn).getUTCDate() == new Date().getDate());
+  const count = filteredData.length;
+  setdailyTrafic(count);
+  console.log("filtredData",filteredData);
+//   lastLoggedIn
+// : 
+// "2023-08-19T06:26:30.423Z"
+    //     let  parsedDate = new Date("2023-08-19T06:26:30.423Z")
+
+
+    //  const hours = parsedDate.getUTCHours();
+    //  console.log("_________hours__________",hours)
+    filteredData.map((element)=>{
+      let  parsedDate = new Date(element.lastLoggedIn)
+      let hours = parsedDate.getUTCHours();
+      console.log(">>>>>>Hours",hours)
+      if(hours<=4&&hours>1)
       {
-          let Data = response.data
-         let dailyTraaficArray = Data.filter((element)=>{
-              checkActiveUser(element)
-          })
-
-          console.log("daily trafic Array",dailyTraaficArray);
-
-          // dailyTraaficArray.map to push in to bar Array to show hourlyTrafic
-
+        increaseValueById("04", 1)
+      
       }
-      function checkActiveUser(element){
-        return ( new Date( element.lastLoggedIn).getUTCDate()==today)
+      if(hours>4&&hours<=8)
+      {
+        increaseValueById("08", 1)
+      } 
+      if(hours>8&&hours<=12)
+      {
+        increaseValueById("12", 1)
       }
-  } catch (error) {
-      console.log(error)
-  }
+      if(hours>12&&hours<=16)
+      {
+        increaseValueById("16", 1)
+      }
+      if(hours>16&&hours<=20)
+      {
+        increaseValueById("20", 1)
+      }
+      if(hours>20)
+      {
+        increaseValueById("24", 1)
+      }
+      if(hours<1)
+      {
+        increaseValueById("00", 1)
+      }
+     })
+
+
+     const increaseValueById = (name, amount) => {
+      // Create a copy of the original array
+      const newArray = [...myArray];
+  
+      // Find the index of the object with the matching id
+      const index = newArray.findIndex(item => item.name === name);
+  
+      if (index !== -1) {
+        // Update the value property of the object
+        newArray[index].pv += amount;
+  
+        // Set the state with the updated array
+        setMyArray(newArray);
+      }
+    };
+
+  // try {           
+  //     const response = await axios.get(`https://malldekho-service.onrender.com/users`); 
+  //     console.log("Response From Api......",response.data);
+  //     if(response.data)
+  //     {
+  //         let Data = response.data
+  //        let dailyTraaficArray = Data.filter((element)=>{
+  //             checkActiveUser(element)
+  //         })
+
+  //         console.log("daily trafic Array",dailyTraaficArray);
+
+  //         // dailyTraaficArray.map to push in to bar Array to show hourlyTrafic
+
+  //     }
+  //     function checkActiveUser(element){
+  //       return ( new Date( element.lastLoggedIn).getUTCDate()==today)
+  //     }
+  // } catch (error) {
+  //     console.log(error)
+  // }
 
 }
 
@@ -107,14 +351,14 @@ const getUsers = async()=>{
       <div style={{alignSelf:"start",marginTop:"30px",marginLeft:"45px"}}>
         <label style={{color:"#C681FD",fontSize:"20px",fontFamily:"DM Sans",fontWeight:"700"}}>Daily Traffic</label>
         <div>
-            <label style={{fontSize:"40px",fontWeight:"600",fontFamily:"DM Sans", paddingRight:"10px"}}>279</label>
+            <label style={{fontSize:"40px",fontWeight:"600",fontFamily:"DM Sans", paddingRight:"10px"}}>{dailyTrafic}</label>
             <label style={{fontFamily:"poppins",fontSize:"20px",opacity:".7"}}>visitors</label>
         </div>
       </div>
       <BarChart
         width={500}
         height={300}
-        data={data}
+        data={Data1}
         margin={{
           top: 5,
           right: 30,

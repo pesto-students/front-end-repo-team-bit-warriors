@@ -21,6 +21,7 @@ import Network from "../Images/network.svg"
 import Profile from "../Images/Profile.svg"
 import MallDekho from "../Images/mallDekho.svg"
 import { useNavigate } from "react-router-dom";
+import users from "../Images/users.svg"
 const toolsLinkArray = [
     {
         path: "tracker/dashboard",
@@ -29,7 +30,7 @@ const toolsLinkArray = [
     },
     {
         path: "tracker/user",
-        image: Network,
+        image: users,
         name: "Users",
     },
     {

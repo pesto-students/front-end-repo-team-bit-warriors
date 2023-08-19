@@ -183,7 +183,7 @@ export default function AddMall() {
             if (button == "SAVE") {
                 console.log("payload.................", userFormData)
                 try {
-                    const response = await axios.post(`https://malldekho-service.onrender.com`, payload);
+                    const response = await axios.post(`https://malldekho-service.onrender.com/malls`, payload);
                     if (response.status==200) {
                         console.log("0000000000000000000000000", response.data);
                         dispatch(setTotalMalls({ totalMalls: ++totalMalls }))
@@ -250,7 +250,7 @@ export default function AddMall() {
                         <div class="form">
                             <Box
                                 component="form"
-                                sx={{ '& .MuiTextField-root': { m: 5, width: '50ch' } }}
+                                sx={{ '& .MuiTextField-root': { m: 5, width: '45ch' } }}
                                 noValidate
                                 autoComplete="off"
                             >

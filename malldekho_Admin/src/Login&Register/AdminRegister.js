@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 // import 'toastr/build/toastr.min.css';
 // import { useHistory } from "react-router-dom/cjs/react-router-dom.min.js";
 const RegisterPage = () => {
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   const initialState = {
     username: '',
     email: '',
@@ -85,7 +85,7 @@ const RegisterPage = () => {
         let config = {
           method: 'post',
           maxBodyLength: Infinity,
-          url: `http://localhost:30001/admin/register`,
+          url: `https://malldekho-service.onrender.com/admin/register`,
           headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
           },
@@ -144,7 +144,7 @@ const RegisterPage = () => {
               <div className="input-container">
                 <label htmlFor="email">Email address</label>
                 <input
-                className="RegisterInput"
+                  className="RegisterInput"
                   type="email"
                   id="email"
                   name="email"
@@ -191,7 +191,8 @@ const RegisterPage = () => {
                 </button>
                 {errors.res && (
                   <small className="messageHelp">{errors.res}</small>
-                )}              </div>
+                )}
+              </div>
             </form>
           </div>
         </div>

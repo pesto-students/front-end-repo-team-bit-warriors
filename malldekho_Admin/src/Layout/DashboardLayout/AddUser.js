@@ -132,41 +132,35 @@ export default function AddUser() {
                 console.log("payload.........", payload)
                 console.log("subit is trigger.........", userFormData);
                 try {
-                    // let reqData = qs.stringify({
-                    //     "username": userFormData.UserName,
-                    //     "firstname": userFormData.FirstName,
-                    //     "lastname": userFormData.LastName,
-                    //     "email": userFormData.Email,
-                    //     "password": userFormData.Password,
-                    //     "phone": userFormData.Phone,
-                    // })
-                    // let config = {
-                    //     method: 'post',
-                    //     maxBodyLength: Infinity,
-                    //     url: `https://malldekho-service.onrender.com/users`,
-                    //     headers: {
-                    //         'Content-Type': 'application/x-www-form-urlencoded'
-                    //     },
-                    //     data: reqData
+                    let reqData = qs.stringify(payload)
+                    let config = {
+                        method: 'post',
+                        maxBodyLength: Infinity,
+                        url: `http://localhost:30001/users`,
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded'
+                        },
+                        data: reqData
 
-                    // }
+                    }
 
-                    // axios.request(config)
-                    //     .then((response) => {
-                    //         //console.log('reached');
-                    //         dispatch(setTotalUsers({ totalUsers: ++totalUsers }))
-                    //         console.log(JSON.stringify(response.data));
-                    //         navigate("app/tracker/user");
-                    //     })
-                    //     .catch((error) => {
-                    //         console.log(error);
-                    //     });
+                    axios.request(config)
+                        .then((response) => {
+                            //console.log('reached');
+                            dispatch(setTotalUsers({ totalUsers: ++totalUsers }))
+                            console.log(JSON.stringify(response.data));
+                            navigate("app/tracker/user");
+                        })
+                        .catch((error) => {
+                            console.log(error);
+                        });
 
-                    const response = await axios.post(`https://malldekho-service.onrender.com/users`, payload);
-                    if (response.data) {
-                        console.log("0000000000000000000000000", response.data);
-                        dispatch(setTotalUsers({ totalUsers: ++totalUsers }))
-                }}
+                //     const response = await axios.post(`http://localhost:30001/users`, payload);
+                //     if (response.data) {
+                //         console.log("0000000000000000000000000", response.data);
+                //         dispatch(setTotalUsers({ totalUsers: ++totalUsers }))
+                // }}
+                }
                 catch (error) {
                     console.log(error)
                 }
@@ -219,7 +213,7 @@ export default function AddUser() {
                         <div class="form">
                             <Box
                                 component="form"
-                                sx={{ '& .MuiTextField-root': { m: 5, width: '50ch' } }}
+                                sx={{ '& .MuiTextField-root': { m: 5, width: '45ch' } }}
                                 noValidate
                                 autoComplete="off"
                             >

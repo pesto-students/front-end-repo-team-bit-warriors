@@ -216,7 +216,7 @@ export default function AddStores() {
                         <div class="form">
                             <Box
                                 component="form"
-                                sx={{ '& .MuiTextField-root': { m: 5, width: '50ch' } }}
+                                sx={{ '& .MuiTextField-root': { m: 5, width: '45ch' } }}
                                 autoComplete="off"
                             >
                                 <form type="submit" autoComplete="off">
