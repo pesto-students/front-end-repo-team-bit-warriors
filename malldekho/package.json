@@ -7,14 +7,22 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
+<<<<<<< HEAD
     "js-cookie": "^3.0.5",
+=======
+    "crypto": "^1.0.1",
+    "js-cookie": "^3.0.5",
+    "jwt-decode": "^3.1.2",
+>>>>>>> fca26c62b3c764b05fa83fa23a12639c794d324d
     "react": "^18.2.0",
     "react-autosuggest": "^10.1.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
+    "react-loading-skeleton": "^3.3.1",
     "react-router-dom": "^5.3.4",
     "react-scripts": "5.0.1",
     "react-search-autocomplete": "^8.5.2",
+    "toastr": "^2.1.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

@@ -1,11 +1,10 @@
 import React, {useState} from "react";
-import { FaMapMarkerAlt, FaGlobe, FaClock, FaHeart } from "react-icons/fa";
+import { FaMapMarkerAlt, FaGlobe, FaClock } from "react-icons/fa";
 import "../styles/GiantCard.css";
 import LikeButton from "./LikeButton";
 import { useEffect } from "react";
 
 const GiantCard = ({ collection, isMall }) => {
-    console.log(collection)
     const [address, setAddress] = useState([])
     const [loading, setLoading] = useState(true);
 
@@ -32,6 +31,22 @@ const GiantCard = ({ collection, isMall }) => {
         }
         main();
     }, [collection, isMall]);
+
+
+    // const onAddFav = (isAdded) => {
+    //     console.log("clicke fav button")
+    //     if(isAdded){
+    //         const favData = {
+    //             user: GlobalService.USER_ID(),
+    //         }
+    //         if(isMall){
+    //             favData["mall"]=collection._id
+    //         }else{
+    //             favData["store"]=collection._id
+    //         }
+    //         console.log(favData);
+    //     }
+    // }
 
     return (
         <div className="mallContainer">
@@ -94,7 +109,7 @@ const GiantCard = ({ collection, isMall }) => {
                             <div className="statNumber">{collection.dailySearch ? collection.dailySearch : 20}</div>
                             <p>Daily Search</p>
                         </span>
-                        <LikeButton/>
+                        <LikeButton />
 
                     </div>
 

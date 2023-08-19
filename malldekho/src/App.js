@@ -39,7 +39,6 @@ const App = () => {
         <Header />
         <Switch>
             {/* Public Routes */}
-            <Route path="/contact" component={ContactUsPage} />
             <Route path="/about" component={AboutUsPage} />
             <Route path="/login" component={LoginPage} />
             <Route path="/signup" component={RegisterPage} />
@@ -48,7 +47,8 @@ const App = () => {
             {/* Private Routes */}
             <PrivateRoute path="/store/:store_id" component={StorePage} />
             <PrivateRoute path="/mall/:mall_id" component={MallPage} />
-            <PrivateRoute path="/user/:user_id" component={ProfilePage} />
+            <PrivateRoute path="/profile" component={ProfilePage} />
+            <PrivateRoute path="/contact" component={ContactUsPage} />
 
             {/* Catch-all for unknown routes */}
             <Route path="*" component={NotFoundPage} />
