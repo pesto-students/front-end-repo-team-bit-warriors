@@ -91,7 +91,11 @@
         opacity: 1;
     }
 }
-
+form .signup {
+    text-decoration: none;
+    padding: 2em 0 0;
+    color: var(--dissolve-color);
+}
 .formGroup {
     display: flex;
     flex-direction: column;
