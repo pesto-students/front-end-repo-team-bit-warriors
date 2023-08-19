@@ -136,7 +136,7 @@ export default function AddUser() {
                     let config = {
                         method: 'post',
                         maxBodyLength: Infinity,
-                        url: `http://localhost:30001/users`,
+                        url: `https://malldekho-service.onrender.com/users`,
                         headers: {
                             'Content-Type': 'application/x-www-form-urlencoded'
                         },
