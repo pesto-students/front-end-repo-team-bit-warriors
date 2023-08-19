@@ -37,7 +37,7 @@ const UserList = () => {
     }, [])
 
     useEffect(() => {
-        // getUsers()
+        getUsers()
     }, [])
 
 
@@ -120,7 +120,7 @@ const UserList = () => {
                                             {UserListData.map((step, ind) => (
                                                 <TableRow
                                                     key={step._id}
-                                                    sx={{ borderRadius: '80px', "&:hover": { bgcolor: "rgba(186,120,203,0.5701855742296919) ", scale: '101%', borderRadius: '8px' } }} key={ind}
+                                                    sx={{ borderRadius: '80px', "&:hover": { bgcolor: "rgba(186,120,203,0.5701855742296919) ", scale: '101%', borderRadius: '8px' } }} 
                                                 >
                                                     <TableCell align="center" >
                                                         <Checkbox
