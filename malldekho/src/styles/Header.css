@@ -73,11 +73,7 @@
     display: none;
     flex-direction: column;
     cursor: pointer;
-<<<<<<< HEAD
     background: var(--dark-primary-color);
-=======
-    background: var(--primary-color);
->>>>>>> 531f8be813a86ec39f32e6636033773fb1b5928a
     border: none;
     padding: 5px;
 }
