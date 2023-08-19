@@ -133,6 +133,8 @@ const initialState = {
             <small className="messageHelp">{errors.res}</small>
           )}
         </div>
+        <a href="/login" className="signup">Already have an account? Please login here</a>
+
       </form>
     </div>
   );
