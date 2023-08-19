@@ -183,7 +183,7 @@ export default function AddMall() {
             if (button == "SAVE") {
                 console.log("payload.................", userFormData)
                 try {
-                    const response = await axios.post(`https://malldekho-service.onrender.com`, payload);
+                    const response = await axios.post(`https://malldekho-service.onrender.com/malls`, payload);
                     if (response.status==200) {
                         console.log("0000000000000000000000000", response.data);
                         dispatch(setTotalMalls({ totalMalls: ++totalMalls }))
@@ -191,7 +191,7 @@ export default function AddMall() {
                             closeButton: true,
                             progressBar: true,
                         });
-                        navigate(`/app/tracker/mall`)
+                        navigate("/app/tracker/mall")
                     }
                 }
                 catch (error) {
@@ -223,7 +223,7 @@ export default function AddMall() {
                     console.log("response...by Update", response.data);
                     if(response.status==200)
                     {
-                        navigate(`/app/tracker/mall`)
+                        navigate("/app/tracker/mall")
                     }
                 } catch (error) {
     
@@ -250,7 +250,7 @@ export default function AddMall() {
                         <div class="form">
                             <Box
                                 component="form"
-                                sx={{ '& .MuiTextField-root': { m: 5, width: '50ch' } }}
+                                sx={{ '& .MuiTextField-root': { m: 5, width: '45ch' } }}
                                 noValidate
                                 autoComplete="off"
                             >
@@ -394,12 +394,8 @@ export default function AddMall() {
                                                 {errors.Gmaplink && <small className="messageHelp">{errors.Gmaplink}</small>}
                                             </div>
                                         </div>
-
-
                                     </div>
-
                                     <div>
-
                                         <div className="textFieldContainer">
                                             <TextField
                                                 required
@@ -409,14 +405,11 @@ export default function AddMall() {
                                                 onChange={handleFormData}
                                                 value={userFormData.FloorsCount}
                                                 style={{ marginBottom: "8px" }}
-
                                             />
                                             <div className="errorContainer">
                                                 {errors.FloorsCount && <small className="messageHelp">{errors.FloorsCount}</small>}
                                             </div>
                                         </div>
-
-
                                         <div className="textFieldContainer">
                                             <TextField
                                                 required
@@ -432,11 +425,8 @@ export default function AddMall() {
                                                 {errors.Floors && <small className="messageHelp">{errors.Floors}</small>}
                                             </div>
                                         </div>
-
-
                                     </div>
                                     <div>
-
                                         <div className="textFieldContainer">
                                             <TextField
                                                 required
@@ -451,8 +441,6 @@ export default function AddMall() {
                                                 {errors.Phone && <small className="messageHelp">{errors.Phone}</small>}
                                             </div>
                                         </div>
-
-
                                         <div className="textFieldContainer">
                                             <TextField
                                                 required
@@ -462,13 +450,11 @@ export default function AddMall() {
                                                 onChange={handleFormData}
                                                 value={userFormData.clockingtimes}
                                                 style={{ marginBottom: "8px" }}
-
                                             />
                                             <div className="errorContainer">
                                                 {errors.clockingtimes && <small className="messageHelp">{errors.clockingtimes}</small>}
                                             </div>
                                         </div>
-
                                     </div>
                                     <div>
                                         <div className="textFieldContainer">
@@ -480,13 +466,11 @@ export default function AddMall() {
                                                 onChange={handleFormData}
                                                 value={userFormData.shopCount}
                                                 style={{ marginBottom: "8px" }}
-
                                             />
                                             <div className="errorContainer">
                                                 {errors.shopCount && <small className="messageHelp">{errors.shopCount}</small>}
                                             </div>
                                         </div>
-
                                         <div className="textFieldContainer">
                                             <TextField
                                                 required
@@ -496,17 +480,12 @@ export default function AddMall() {
                                                 onChange={handleFormData}
                                                 value={userFormData.Website}
                                                 style={{ marginBottom: "8px" }}
-
                                             />
                                             <div className="errorContainer">
                                                 {errors.Website && <small className="messageHelp">{errors.Website}</small>}
                                             </div>
                                         </div>
-
-
-
                                     </div>
-
                                     <div>
                                         <div class="addUserImageContainer" >
                                             <h2 class="addUserImageHeading" >Add User Image</h2>
@@ -519,10 +498,7 @@ export default function AddMall() {
                                     </div>
                                 </form>
                             </Box>
-
-
                         </div>
-
                     </Grid>
                 </Grid>
             </Box>

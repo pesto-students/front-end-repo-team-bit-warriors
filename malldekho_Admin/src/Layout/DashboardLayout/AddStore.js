@@ -165,7 +165,7 @@ export default function AddStores() {
                     if (response.status=200) {
                         console.log("0000000000000000000000000", response.data)
                         dispatch(setTotalStores({ totalStores: ++totalStors }))
-                        navigate(`/app/tracker/stores`)
+                        navigate("/app/tracker/stores")
 
                     }
                 } catch (error) {
@@ -189,7 +189,7 @@ export default function AddStores() {
                     console.log("response...by Update", response.data);
                     if(response.status==200)
                     {
-                        navigate(`/app/tracker/stores`)
+                        navigate("/app/tracker/stores")
                     }
                 } catch (error) {
                 }
@@ -199,11 +199,8 @@ export default function AddStores() {
                 progressBar: true,
             });
         }
-      
     }
-
     console.log(".........................", parameter);
-
     return (
         <>
             <div class="heading">Add Your Store</div>
@@ -219,20 +216,13 @@ export default function AddStores() {
                         <div class="form">
                             <Box
                                 component="form"
-                                sx={{ '& .MuiTextField-root': { m: 5, width: '50ch' } }}
+                                sx={{ '& .MuiTextField-root': { m: 5, width: '45ch' } }}
                                 autoComplete="off"
                             >
-
-
-
-
                                 <form type="submit" autoComplete="off">
-
-
                                     <div>
                                         <div className="textFieldContainer">
                                             <TextField
-                                                
                                                 id="standard-error"
                                                 label="Name"
                                                 name="Name"
@@ -246,7 +236,6 @@ export default function AddStores() {
                                                 {errors.Name && <small className="messageHelp">{errors.Name}</small>}
                                             </div>
                                         </div>
-
                                         <div className="textFieldContainer">
                                             <TextField
                                                 id="standard-error"
@@ -263,7 +252,6 @@ export default function AddStores() {
                                             </div>
                                         </div>
                                     </div>
-
                                     <div>
                                     <div className="textFieldContainer">
                                             <TextField
@@ -296,7 +284,6 @@ export default function AddStores() {
                                             </div>
                                         </div>
                                     </div>
-
                                     <div>
                                     <div className="textFieldContainer">
                                             <TextField
@@ -313,7 +300,6 @@ export default function AddStores() {
                                                 {errors.Phone && <small className="messageHelp">{errors.Phone}</small>}
                                             </div>
                                         </div>
-
                                         <div className="textFieldContainer">
                                             <TextField
                                                 required
@@ -330,10 +316,7 @@ export default function AddStores() {
                                                 {errors.Email && <small className="messageHelp">{errors.Email}</small>}
                                             </div>
                                         </div>
-
-
                                     </div>
-
                                     <div>
                                         <div className="textFieldContainer">
                                             <TextField
@@ -350,28 +333,20 @@ export default function AddStores() {
                                                 {errors.Website && <small className="messageHelp">{errors.Website}</small>}
                                             </div>
                                         </div>
-
                                     </div>
                                     <div>
                                         <div class="addUserImageContainer" >
                                             <h2 class="addUserImageHeading"  >Add Store Image</h2>
                                             <input st type="file" onChange={handleChangeImage} />
                                         </div>
-
-
-
                                         <div class="buttonContainer">
                                             <button type="submit" onClick={handleSubmit} class="submitButton">{button}</button>
                                             {/* <button style={{ width: "200px", height: "37px", backgroundColor: "rgba(176,174,247,0.738532913165266)", borderRadius: "8px", border: "1px solid black", color: "white", marginTop: "20px", marginLeft: "7px",boxShadow: "rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px",color:"black" }}>CLEAR</button> */}
                                         </div>
                                     </div>
                                 </form>
-
                             </Box>
-
-
                         </div>
-
                     </Grid>
                 </Grid>
             </Box>
