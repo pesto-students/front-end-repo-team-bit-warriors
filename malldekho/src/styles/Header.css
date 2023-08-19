@@ -71,7 +71,7 @@
     display: none;
     flex-direction: column;
     cursor: pointer;
-    background: transparent;
+    background: var(--dark-primary-color);
     border: none;
     padding: 5px;
 }
