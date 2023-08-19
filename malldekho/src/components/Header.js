@@ -25,10 +25,10 @@ const Header = () => {
 
     return (
         <header className="header">
-            <div className="logo">
+            <a className="logo" href="/">
                 <img src={logo} alt="" />
                 <h1>Mall dekho</h1>
-            </div>
+            </a>
             <button className="hamburger" onClick={toggleDrawer}>
                 <div className={`hamburger-line ${showDrawer ? "open" : ""}`}></div>
                 <div className={`hamburger-line ${showDrawer ? "open" : ""}`}></div>

@@ -14,10 +14,15 @@ import AddUsers from "./Layout/DashboardLayout/AddUser";
 import AddMall from "./Layout/DashboardLayout/AddMall";
 import AddStores from "./Layout/DashboardLayout/AddStore";
 import AddAdmin from "./Layout/DashboardLayout/AddAdmin";
+import LoginPage from "./Login&Register/AdminLogin";
+import RegisterPage from "./Login&Register/AdminRegister";
+import Cookies from 'js-cookie';
+import SecureLS from "secure-ls";
 
 export const Router = () => {
-
-    let isUserLoggedIn = true;
+    var ls= new SecureLS();
+    
+    let isUserLoggedIn = ls.get("isUserLoggedIn");
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -49,7 +54,13 @@ export const Router = () => {
                         <Route path="addAdmin" element={<AddAdmin/>} />
                     </Route>
                 ) : (
-                    <Route path="/" element={<Demo2 />}></Route>
+                    
+                    <Route>
+                    <Route  path="/" element={<LoginPage />}></Route>
+                    <Route path="/register" element={<RegisterPage />}></Route>
+                    </Route>
+
+
                 )}
 
                 {/* <Route path="*" element={<ErrorPage />}></Route> */}

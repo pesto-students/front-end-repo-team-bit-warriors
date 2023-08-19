@@ -11,14 +11,40 @@ import "../../style/profile.css"
 
 const Profile = () => {
   const [value, setValue] = useState("janeDoe@domain.com");
-  const [editMode, setEditMode] = useState(false);
-  const [mouseOver, setMouseOver] = useState(false);
+  const [editMode, setEditMode] = useState(false);  
   const [profileFormValue, SetprofileFormValue] = useState({
     FullName: "",
     Email: "",
     UserName: "",
-    Phone: ""
+    Phone: "",
+    Image:""
   })
+
+
+//   useEffect(() => {
+
+//     async function fetchUser() {
+//         try {
+//             const userData = await axios.get(`https://malldekho-service.onrender.com/admin`);
+//             console.log(userData)
+//             SetprofileFormValue(userData)
+//         } catch (error) {
+//             console.error("Error fetching user details:", error);
+//         }
+//     }
+//     fetchUser();
+// }, [])
+
+
+// const handleInputChange = (e) => {
+//   const { name, value } = e.target;
+//   setFormData((prevData) => ({
+//       ...prevData,
+//       [name]: value,
+//   }));
+//   console.log("formData", formData)
+// };
+
 
 //   useEffect(() => {
 //     getUsers()
@@ -62,7 +88,7 @@ const Profile = () => {
 
   const handleClick = () => {
     setEditMode(!editMode);
-    setMouseOver(false);
+    // setMouseOver(false);
   };
 
   const handleSubmit = () => {
